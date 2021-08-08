@@ -1,0 +1,348 @@
+/* Design By: Mohamed Ali === Al Salem Johnson Controls */
+
+@import url("https://use.typekit.net/mzs4sen.css");
+
+:root {
+  --first-color: #00539e;
+  --second-color: #151515;
+  --third-color: #ffffff;
+}
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "proxima-nova", Arial, sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--third-color);
+  outline: none;
+}
+*,
+a,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+html,
+img,
+li,
+p,
+span {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+.container {
+  width: 100%;
+  padding-right: 24px;
+  padding-left: 24px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  max-width: 1440px;
+  margin: auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--second-color);
+}
+/* =========================
+    =========== NAVBAR =========
+    ============================ */
+.navbar {
+  /* background: var(--third-color); */
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  padding: 10px 0;
+  top: 0;
+  left: 0;
+}
+.navbar a {
+  color: var(--third-color);
+}
+.navy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navy .logo {
+  width: 220px;
+  height: auto;
+}
+.navy .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================
+    =========== HERO =========
+    ============================ */
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background: url("img/main.jpg") center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.hero .info {
+  width: 50%;
+  height: 100vh;
+  position: relative;
+  color: var(--third-color);
+  z-index: 1;
+}
+.hero .info h1 {
+  padding-top: 200px;
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.hero .info p {
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 20px auto 40px;
+}
+.hero .info .selection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.hero .info .selection a.box {
+  background: transparent;
+  border: 2px solid var(--third-color);
+  border-radius: 5px;
+  width: 100%;
+  height: 70px;
+  padding: 0 50px;
+  margin-right: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--third-color);
+  transition: all 0.3s ease-in-out;
+}
+.hero .info .selection a.box:last-child {
+  margin-right: 0;
+}
+.hero .info .selection a.box:hover {
+  background: var(--third-color);
+  color: var(--first-color);
+}
+
+@media screen and (max-width: 767px) {
+  .navy .logo {
+    width: 170px;
+  }
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .hero .info {
+    width: 100%;
+  }
+  .hero .info h1 {
+    padding-top: 120px;
+    font-size: 28px;
+  }
+  .hero .info .selection {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .hero .info .selection a.box {
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+    height: 60px;
+    margin-top: 20px;
+  }
+  .hero .info .selection a.box:first-child {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .hero .details .info h1 {
+    font-size: 20px;
+  }
+  .hero .details .info p {
+    font-size: 14px;
+  }
+}
+
+/* Video */
+.video {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url("img/global-hero.jpg") center center no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+.video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.73;
+  background-image: linear-gradient(
+    222deg,
+    rgba(21, 22, 54, 0),
+    rgba(5, 3, 17, 0.66) 74%
+  );
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+.video .content {
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .video .content {
+    width: 100%;
+  }
+}
+
+.video .content h1 {
+  font-size: 36px;
+  padding-top: 200px;
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--third-color);
+}
+.video .content p {
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 20px auto 40px;
+  color: var(--third-color);
+}
+.video .content .selection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.video .content .selection a.box {
+  background: transparent;
+  border: 2px solid var(--third-color);
+  border-radius: 5px;
+  width: 100%;
+  height: 70px;
+  padding: 0 50px;
+  margin-right: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--third-color);
+  transition: all 0.3s ease-in-out;
+}
+.video .content .selection a.box:last-child {
+  margin-right: 0;
+}
+.video .content .selection a.box:hover {
+  background: var(--third-color);
+  color: var(--first-color);
+}
+
+/* Arabic */
+.video.ar .content h1 {
+  font-size: 62px;
+}
+.video.ar .content {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  text-align: right;
+  margin-right: 0;
+  float: right;
+}
+.video.ar .content .selection a.box {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .video .content h1 {
+    font-size: 22px;
+    padding-top: 150px;
+  }
+  .video .content .selection {
+    flex-direction: column;
+  }
+  .video .content .selection {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .video .content .selection a.box {
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+    height: 60px;
+    margin-top: 20px;
+  }
+  .video .content .selection a.box:first-child {
+    margin-top: 0;
+  }
+
+  /* Arabic */
+  .video.ar .content h1 {
+    font-size: 28px;
+  }
+  .video.ar .content {
+    width: 100%;
+  }
+}
